@@ -205,6 +205,9 @@ class CNNModelHelper(ModelHelper):
             self, *args, use_cudnn=self.use_cudnn, order=self.order, **kwargs
         )
 
+    def Reorg(self, *args, **kwargs):
+        return brew.reorg(self, *args, order=self.order, **kwargs)
+
     @property
     def XavierInit(self):
         return ('XavierFill', {})
