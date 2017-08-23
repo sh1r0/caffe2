@@ -67,5 +67,6 @@ class GetLeakyReluGradient : public GradientMakerBase {
 };
 
 REGISTER_GRADIENT(LeakyRelu, GetLeakyReluGradient);
+REGISTER_GRADIENT(LeakyReluFp16, GetLeakyReluGradient);
 
 } // namespace caffe2
